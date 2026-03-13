@@ -26,12 +26,6 @@
 html{background:var(--white);scroll-behavior:smooth}
 body{font-family:'Source Sans 3',sans-serif;background:var(--white);color:var(--body);font-size:17px;line-height:1.75;-webkit-font-smoothing:antialiased}
 
-/* ── TOP BAR ──────────────────────────────────────────────── */
-.topbar{background:var(--navy);padding:8px 0;border-bottom:3px solid var(--gold)}
-.topbar-inner{max-width:1100px;margin:0 auto;padding:0 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.topbar-left{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.55);font-weight:600}
-.topbar-right{font-size:11px;color:rgba(255,255,255,.45);letter-spacing:.5px}
-
 /* ── HEADER ───────────────────────────────────────────────── */
 header{background:var(--white);border-bottom:1px solid var(--border);padding:36px 0 0}
 .header-inner{max-width:1100px;margin:0 auto;padding:0 28px}
@@ -41,16 +35,6 @@ header{background:var(--white);border-bottom:1px solid var(--border);padding:36p
 .header-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,5vw,3.4rem);font-weight:900;line-height:1.1;color:var(--navy);margin-bottom:16px;max-width:760px}
 .header-title em{font-style:italic;color:var(--gold)}
 .header-deck{font-size:1.08rem;color:var(--muted);max-width:620px;line-height:1.65;margin-bottom:28px;font-weight:400}
-.header-meta{display:flex;align-items:center;gap:20px;padding:16px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-bottom:0}
-.meta-authors{display:flex;align-items:center;gap:8px}
-.meta-avatar{width:32px;height:32px;border-radius:50%;background:var(--navy);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.meta-avatar svg{width:16px;height:16px;color:var(--gold)}
-.meta-name{font-size:.88rem;font-weight:700;color:var(--ink)}
-.meta-role{font-size:.78rem;color:var(--muted)}
-.meta-sep{width:1px;height:28px;background:var(--border)}
-.meta-info{font-size:.82rem;color:var(--muted)}
-.meta-info strong{color:var(--ink);font-weight:600}
-
 /* ── NAV TABS ─────────────────────────────────────────────── */
 .tabnav{background:var(--white);position:sticky;top:0;z-index:100;border-bottom:2px solid var(--border);box-shadow:0 2px 12px rgba(0,0,0,.06)}
 .tabnav-inner{max-width:1100px;margin:0 auto;padding:0 28px;display:flex;gap:0;overflow-x:auto;scrollbar-width:none}
@@ -189,8 +173,10 @@ aside{position:sticky;top:56px;max-height:calc(100vh - 72px);overflow-y:auto;scr
 .plazo-row span{color:var(--muted)}
 .plazo-row strong{color:var(--navy);font-weight:700;font-size:.9rem}
 .ley-item{padding:8px 16px;border-bottom:1px solid var(--border);font-size:.85rem;color:var(--body);display:flex;gap:8px;align-items:flex-start}
-.ley-item:last-child{border-bottom:none}
 .ley-item::before{content:'§';color:var(--gold);font-weight:700;flex-shrink:0;font-size:.9rem}
+.ref-link-btn{display:flex;align-items:center;gap:8px;margin:10px 14px 12px;padding:9px 14px;background:var(--navy);color:white;border-radius:5px;font-size:.82rem;font-weight:600;cursor:pointer;text-decoration:none;transition:background .15s}
+.ref-link-btn:hover{background:var(--accent-blue)}
+.ref-link-btn svg{width:14px;height:14px;flex-shrink:0;color:var(--gold)}
 
 /* ── VIDEO WIDGET ─────────────────────────────────────────── */
 .video-wrap{position:relative;width:100%;padding-top:56.25%;cursor:pointer;background:#000}
@@ -224,14 +210,6 @@ footer strong{color:rgba(255,255,255,.9)}
 </head>
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-  <div class="topbar-inner">
-    <span class="topbar-left">Derecho Civil I &nbsp;·&nbsp; Universidad Interamericana de Panamá &nbsp;·&nbsp; 2025</span>
-    <span class="topbar-right">Prof. Dra. Josefina Camargo</span>
-  </div>
-</div>
-
 <!-- HEADER -->
 <header>
   <div class="header-inner">
@@ -241,21 +219,6 @@ footer strong{color:rgba(255,255,255,.9)}
     </div>
     <h1 class="header-title">El negocio jurídico<br>en el <em>siglo XXI</em></h1>
     <p class="header-deck">Cada vez que firmas un contrato, vendes tu carro o recibes una herencia, estás dentro de un negocio jurídico. Este blog explica por qué eso importa — en Panamá y en la era digital.</p>
-    <div class="header-meta">
-      <div class="meta-authors">
-        <div class="meta-avatar">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0"/></svg>
-        </div>
-        <div>
-          <div class="meta-name">Marciaga, B. &nbsp;·&nbsp; TBD</div>
-          <div class="meta-role">Estudiantes, Facultad de Derecho y Ciencias Políticas</div>
-        </div>
-      </div>
-      <div class="meta-sep"></div>
-      <div class="meta-info"><strong>APA 7.ª ed.</strong> · 12 referencias</div>
-      <div class="meta-sep"></div>
-      <div class="meta-info">Código Civil Panameño · Arts. 1106–1783</div>
-    </div>
   </div>
 </header>
 
@@ -266,7 +229,6 @@ footer strong{color:rgba(255,255,255,.9)}
     <button class="tab-btn" onclick="showTab('prescripcion',this)">Prescripción y caducidad</button>
     <button class="tab-btn" onclick="showTab('sigloXXI',this)">Siglo XXI</button>
     <button class="tab-btn" onclick="showTab('panama',this)">Panamá y la vida real</button>
-    <button class="tab-btn" onclick="showTab('referencias',this)">Referencias</button>
   </div>
 </nav>
 
@@ -776,19 +738,6 @@ footer strong{color:rgba(255,255,255,.9)}
 
   <div class="widget">
     <div class="widget-head">
-      <h4><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 6.75h12M8.25 12h12m-12 5.25h12M3.75 6.75h.007v.008H3.75V6.75zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zM3.75 12h.007v.008H3.75V12zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0zm-.375 5.25h.007v.008H3.75v-.008zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"/></svg> Navegar</h4>
-    </div>
-    <div class="widget-body">
-      <a class="nav-link" onclick="showTab('teoria',null)">El negocio jurídico</a>
-      <a class="nav-link" onclick="showTab('prescripcion',null)">Prescripción y caducidad</a>
-      <a class="nav-link" onclick="showTab('sigloXXI',null)">Siglo XXI</a>
-      <a class="nav-link" onclick="showTab('panama',null)">Panamá y la vida real</a>
-      <a class="nav-link" onclick="showTab('referencias',null)">Referencias APA</a>
-    </div>
-  </div>
-
-  <div class="widget">
-    <div class="widget-head">
       <h4><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"/></svg> Plazos clave</h4>
     </div>
     <div class="widget-body">
@@ -803,7 +752,7 @@ footer strong{color:rgba(255,255,255,.9)}
 
   <div class="widget">
     <div class="widget-head">
-      <h4><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg> Leyes citadas</h4>
+      <h4><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z"/></svg> Referencias</h4>
     </div>
     <div class="widget-body">
       <div class="ley-item">Código Civil — Arts. 1106 y ss.</div>
@@ -811,6 +760,10 @@ footer strong{color:rgba(255,255,255,.9)}
       <div class="ley-item">Ley 43/2001 — Firma electrónica</div>
       <div class="ley-item">Ley 45/2007 — Consumidor</div>
       <div class="ley-item">Ley 1/1984 — Fideicomiso</div>
+      <a onclick="showTab('referencias',null);window.scrollTo({top:0,behavior:'smooth'});" class="ref-link-btn">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25"/></svg>
+        Ver bibliografía completa (APA 7.ª)
+      </a>
     </div>
   </div>
 
@@ -833,9 +786,31 @@ footer strong{color:rgba(255,255,255,.9)}
 </div><!-- /layout -->
 
 <footer>
-  <strong>El Negocio Jurídico en el Siglo XXI</strong> — Blog Académico · Derecho Civil I<br>
-  Universidad Interamericana de Panamá · Facultad de Derecho y Ciencias Políticas<br>
-  Prof. Dra. Josefina Camargo · 2025
+  <div style="max-width:1100px;margin:0 auto;padding:0 28px">
+    <div style="display:grid;grid-template-columns:1fr 1fr 1fr;gap:32px;text-align:left;border-bottom:1px solid rgba(255,255,255,.12);padding-bottom:28px;margin-bottom:24px">
+      <div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px">Autores</div>
+        <div style="color:rgba(255,255,255,.85);font-weight:600;margin-bottom:4px">Marciaga, B. &nbsp;·&nbsp; Arias, A.</div>
+        <div style="color:rgba(255,255,255,.5);font-size:.85rem">Estudiantes, Facultad de Derecho<br>y Ciencias Políticas</div>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px">Curso</div>
+        <div style="color:rgba(255,255,255,.85);font-weight:600;margin-bottom:4px">Derecho Civil I &nbsp;·&nbsp; 2025</div>
+        <div style="color:rgba(255,255,255,.5);font-size:.85rem">Prof. Dra. Josefina Camargo<br>Universidad Interamericana de Panamá</div>
+      </div>
+      <div>
+        <div style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:10px">Referencias</div>
+        <div style="color:rgba(255,255,255,.85);font-weight:600;margin-bottom:4px">APA 7.ª edición &nbsp;·&nbsp; 12 fuentes</div>
+        <a onclick="showTab('referencias',null);window.scrollTo({top:0,behavior:'smooth'});" style="color:var(--gold);font-size:.85rem;cursor:pointer;text-decoration:none;display:inline-flex;align-items:center;gap:6px;margin-top:4px;opacity:.9">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" style="width:13px;height:13px"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
+          Ver bibliografía completa
+        </a>
+      </div>
+    </div>
+    <div style="text-align:center;color:rgba(255,255,255,.35);font-size:.8rem">
+      <strong style="color:rgba(255,255,255,.7)">El Negocio Jurídico en el Siglo XXI</strong> &nbsp;·&nbsp; Blog Académico &nbsp;·&nbsp; Derecho Civil I &nbsp;·&nbsp; Universidad Interamericana de Panamá
+    </div>
+  </div>
 </footer>
 
 <script>
@@ -857,10 +832,10 @@ function showTab(name, btn) {
     if (btns[idx]) btns[idx].classList.add('active');
   }
 
-  // Scroll to just below the nav bar
+  // Scroll to top of content (just below sticky nav)
   var nav = document.querySelector('.tabnav');
   if (nav) {
-    var y = nav.getBoundingClientRect().bottom + window.pageYOffset + 8;
+    var y = nav.offsetTop + nav.offsetHeight;
     window.scrollTo({ top: y, behavior: 'smooth' });
   }
 }
